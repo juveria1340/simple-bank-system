@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankapp-deployment
+  name: nodeapp-deployment
   labels:
-    app: bankapp
+    app: nodeapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bankapp
+      app: nodeapp
   template:
     metadata:
       labels:
-        app: bankapp 
+        app: nodeapp 
     spec:
       containers:
-      - name: bankserver
-        image: juveria1340/project_4:latest
+      - name: nodeserver
+        image: rachana0503/project_4:latest
         ports:
         - containerPort: 3000
         
@@ -26,11 +26,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-service
+  name: nodeapp-service
 spec:
   selector:
-    app: bankapp 
-  type: LoadBalancer
+    app: nodeport 
+  type: NodePort
   ports:
   - protocol: TCP
     port: 5000
