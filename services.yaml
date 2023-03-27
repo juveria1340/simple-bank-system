@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankapp-deployment
+  name: nodeapp-deployment
   labels:
     app: nodeapp
 spec:
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-service
+  name: nodeapp-service
 spec:
   selector:
     app: nodeport 
