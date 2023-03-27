@@ -30,7 +30,7 @@ metadata:
 spec:
   selector:
     app: nodeapp 
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 5000
