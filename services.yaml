@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Bank-app-deployment
+  name: bankapp-deployment
   labels:
     app: bankapp
 spec:
@@ -15,7 +15,7 @@ spec:
         app: bankapp 
     spec:
       containers:
-      - name: nodeserver
+      - name: bankserver
         image: juveria1340/project_4:latest
         ports:
         - containerPort: 3000
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Bank-app-service
+  name: bankapp-service
 spec:
   selector:
     app: bankapp 
