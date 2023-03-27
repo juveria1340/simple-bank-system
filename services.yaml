@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: Bank-app-deployment
   labels:
-    app: nodeapp
+    app: bankapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: bankapp
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: bankapp 
     spec:
       containers:
       - name: nodeserver
@@ -29,7 +29,7 @@ metadata:
   name: Bank-app-service
 spec:
   selector:
-    app: nodeapp 
+    app: bankapp 
   type: LoadBalancer
   ports:
   - protocol: TCP
