@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: rachana0503/project_4:latest
+        image: juveria1340/project_4x:latest
         ports:
         - containerPort: 3000
         
